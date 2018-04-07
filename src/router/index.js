@@ -80,6 +80,16 @@ export const asyncRouterMap = [
                     {path: 'finance', name: '财务管理',  component: _import('cargo/Finance')}
                 ]
             },
+            {path: '/study', name: '学习管理',  icon: 'navigate',
+                component: {
+                    render(c) {
+                        return c('router-view')
+                    }
+                },
+                children: [
+                    {path: 'MyNote', name: '我的笔记', component: _import('note/MyNote')}
+                ]
+            },
             {path: '/stat', name: '统计分析', redirect: '/stat/factorysale', icon: 'speedometer',
                 component: {
                     render(c) {
